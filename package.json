@@ -1,0 +1,22 @@
+{
+  "name": "yuki-glow-store",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@sanity/client": "^8.6.2",
+    "@sanity/image-url": "^2.1.1",
+    "canvas-confetti": "^1.9.4",
+    "lenis": "^1.3.26",
+    "motion": "^13.4.0",
+    "next": "^16.3.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-hot-toast": "^2.6.1",
+    "stripe": "^22.6.2"
+  }
+}
