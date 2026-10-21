@@ -20,7 +20,7 @@ export default function Hero({ banner, imageUrl }) {
   const px = useSpring(mx, { stiffness: 80, damping: 18 });
   const py = useSpring(my, { stiffness: 80, damping: 18 });
 
-  const [first, ...rest] = (banner.largeText1 || "Yuki Glow").split(" ");
+  const [first, ...rest] = (banner.largeText1 || "Blossom").split(" ");
   const href = `/product/${slugify(banner.product)}`;
   const d = 2.15; // wait for preloader
 

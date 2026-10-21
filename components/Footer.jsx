@@ -16,7 +16,7 @@ export default function Footer() {
         </nav>
       </Reveal>
       <div className="footer-mark" aria-hidden>
-        Yuki Glow
+        Blossom
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Websity Ecommerce. All rights reserved.</span>

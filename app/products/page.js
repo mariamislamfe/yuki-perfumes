@@ -1,6 +1,6 @@
 import ProductCard from "@/components/ProductCard";
 import { SplitText, Reveal } from "@/components/Reveal";
-import { getProducts } from "@/lib/sanity";
+import { getProducts } from "@/lib/catalog";
 
 export const metadata = { title: "The Collection" };
 

@@ -3,7 +3,6 @@ import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
-import { img } from "@/lib/sanity";
 import { formatPrice } from "@/lib/format";
 
 export default function ProductCard({ product, index = 0 }) {
@@ -13,7 +12,7 @@ export default function ProductCard({ product, index = 0 }) {
   const rx = useSpring(useTransform(my, [-0.5, 0.5], [7, -7]), { stiffness: 200, damping: 20 });
   const ry = useSpring(useTransform(mx, [-0.5, 0.5], [-7, 7]), { stiffness: 200, damping: 20 });
 
-  const src = img(product.image?.[0], 800);
+  const src = product.images[0];
 
   return (
     <motion.article
@@ -22,7 +21,7 @@ export default function ProductCard({ product, index = 0 }) {
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.9, delay: (index % 4) * 0.09, ease: [0.22, 1, 0.36, 1] }}
     >
-      <Link href={`/product/${product.slug.current}`} className="card" data-cursor>
+      <Link href={`/product/${product.slug}`} className="card" data-cursor>
         <motion.div
           ref={ref}
           className="card-media"

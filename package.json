@@ -1,5 +1,5 @@
 {
-  "name": "yuki-glow-store",
+  "name": "blossom-store",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@sanity/client": "^8.6.2",
-    "@sanity/image-url": "^2.1.1",
     "canvas-confetti": "^1.9.4",
     "lenis": "^1.3.26",
     "motion": "^13.4.0",

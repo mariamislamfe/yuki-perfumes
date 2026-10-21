@@ -5,11 +5,11 @@ import ProductCard from "@/components/ProductCard";
 import EditorialBanner from "@/components/EditorialBanner";
 import { Reveal, SplitText } from "@/components/Reveal";
 import Magnetic from "@/components/Magnetic";
-import { getBanner, getProducts, img } from "@/lib/sanity";
+import { getBanner, getProducts } from "@/lib/catalog";
 
 export default async function Home() {
   const [products, banner] = await Promise.all([getProducts(), getBanner()]);
-  const imageUrl = banner ? img(banner.image, 1000) : "";
+  const imageUrl = banner?.image ?? "";
 
   return (
     <>

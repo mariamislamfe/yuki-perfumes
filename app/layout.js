@@ -13,7 +13,7 @@ const display = Cormorant_Garamond({
 const body = Inter({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata = {
-  title: { default: "Yuki Glow — Perfumes that speak your story", template: "%s · Yuki Glow" },
+  title: { default: "Blossom — Perfumes that speak your story", template: "%s · Blossom" },
   description: "An exclusive perfume collection. Discover a scent that speaks your story.",
 };
 

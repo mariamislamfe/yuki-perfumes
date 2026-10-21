@@ -1,6 +1,6 @@
-# Yuki Glow — perfume store
+# Blossom — perfume store
 
-Next.js (App Router) · React 19 · Motion · Lenis · Sanity (content) · Stripe (card payments).
+Next.js (App Router) · React 19 · Motion · Lenis · Stripe (card payments).
 
 ```bash
 npm install
@@ -9,4 +9,4 @@ npm run dev                  # http://localhost:3000
 npm run build && npm start
 ```
 
-Content (products, banner) is read from the existing Sanity project. Cash on delivery works without Stripe keys.
+Products and the home banner live in `lib/catalog.js`; product images are in `public/products/`. Cash on delivery works without Stripe keys.

@@ -1,5 +1,5 @@
 import Stripe from "stripe";
-import { client, img } from "@/lib/sanity";
+import { getProducts } from "@/lib/catalog";
 
 export async function POST(req) {
   if (!process.env.STRIPE_SECRET_KEY) {
@@ -12,11 +12,8 @@ export async function POST(req) {
       return Response.json({ error: "Your bag is empty." }, { status: 400 });
     }
 
-    // Never trust client prices: re-fetch from Sanity.
-    const products = await client.withConfig({ useCdn: false }).fetch(
-      `*[_type == "product" && _id in $ids]{_id, name, price, image}`,
-      { ids: items.map((i) => i._id) }
-    );
+    // Never trust client prices: look them up in the catalog.
+    const products = await getProducts();
     const byId = new Map(products.map((p) => [p._id, p]));
 
     const line_items = items
@@ -26,7 +23,7 @@ export async function POST(req) {
         return {
           price_data: {
             currency: "egp",
-            product_data: { name: p.name, images: p.image?.[0] ? [img(p.image[0], 600)] : [] },
+            product_data: { name: p.name, images: [new URL(p.images[0], req.url).href] },
             unit_amount: Math.round(p.price * 100),
           },
           quantity: Math.max(1, Math.min(20, Number(i.quantity) || 1)),

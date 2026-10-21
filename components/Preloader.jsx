@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
-const word = "Yuki Glow".split("");
+const word = "Blossom".split("");
 
 export default function Preloader() {
   const [show, setShow] = useState(true);
@@ -24,7 +24,7 @@ export default function Preloader() {
           exit={{ y: "-100%" }}
           transition={{ duration: 0.95, ease: [0.76, 0, 0.24, 1] }}
         >
-          <div className="preloader-word" aria-label="Yuki Glow">
+          <div className="preloader-word" aria-label="Blossom">
             {word.map((c, i) => (
               <span key={i} className="mask">
                 <motion.span

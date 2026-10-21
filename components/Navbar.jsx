@@ -24,7 +24,7 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <Link href="/" className="logo">
-        Yuki <em>Glow</em>
+        Blossom
       </Link>
       <nav className="nav-links">
         <Link href="/products" className="link-u">

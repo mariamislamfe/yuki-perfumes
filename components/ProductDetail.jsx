@@ -61,7 +61,7 @@ export default function ProductDetail({ product, images, cartItem }) {
         <Reveal>
           <p className="eyebrow">Eau de parfum</p>
         </Reveal>
-        <SplitText as="h1" text={product.name} className="display xl" delay={0.2} immediate italicWords={["Girl", "Glamorous", "Arabian"]} />
+        <SplitText as="h1" text={product.name} className="display xl" delay={0.2} immediate italicWords={[product.name.split(" ").at(-1)]} />
         <Reveal delay={0.3}>
           <div className="stars" aria-label="4 out of 5 stars">
             ★★★★<span>★</span> <em>(20 reviews)</em>
